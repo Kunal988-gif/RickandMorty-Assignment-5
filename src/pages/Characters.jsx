@@ -96,15 +96,19 @@ function Characters() {
   useEffect(() => {
     const timer = setTimeout(() => {
       if (searchInput !== urlName) {
-        updateParams({
-          name: searchInput.trim(),
-          page: '1', // Reset to page 1 on new search
-        });
+        const updated = new URLSearchParams(searchParams);
+        if (searchInput.trim()) {
+          updated.set('name', searchInput.trim());
+        } else {
+          updated.delete('name');
+        }
+        updated.set('page', '1'); // Reset to page 1 on new search
+        setSearchParams(updated);
       }
     }, 400);
 
     return () => clearTimeout(timer);
-  }, [searchInput]);
+  }, [searchInput, urlName, searchParams, setSearchParams]);
 
   // Handle status filter change
   const handleStatusChange = (e) => {
