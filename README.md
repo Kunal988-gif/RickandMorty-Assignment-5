@@ -5,8 +5,8 @@ Rick and Morty Explorer is a web application built using React and React Router 
 ## Project Details
 - Assignment: Assignment-5
 - Problem Statement: PS4 — Rick and Morty Explorer
-- Target Repository: ps4-rick-and-morty-explorer
-- Live Deployment URL: [Deployment URL will be added here after deployment]
+- Target Repository: RickandMorty-Assignment-5
+- Live Deployment URL: https://rickandmorty-assignment-5-production.up.railway.app/
 
 ## Technologies Used
 - React
@@ -61,7 +61,4 @@ npm run preview
 2. The included `vercel.json` ensures client-side routing works for direct URLs.
 3. Deploy the project.
 
-### Netlify
-1. Import the repository into Netlify.
-2. The included `public/_redirects` file routes all requests to `index.html`.
-3. Set the build command to `npm run build` and publish directory to `dist`.
+
